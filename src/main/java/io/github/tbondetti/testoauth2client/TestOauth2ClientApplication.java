@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TestOauth2ClientApplication {
 
-	public static void main(String[] args) {
+	static void main(final String[] args) {
 		SpringApplication.run(TestOauth2ClientApplication.class, args);
 	}
 
