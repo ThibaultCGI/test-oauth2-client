@@ -5,15 +5,13 @@ import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Map;
-
 @RestController
 public class HomeController {
 
     @GetMapping("/")
-    public Map<String, Object> home(
+    public OidcUser home(
             @AuthenticationPrincipal final OidcUser user
     ) {
-        return user.getClaims();
+        return user;
     }
 }
